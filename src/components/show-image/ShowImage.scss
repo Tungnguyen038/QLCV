@@ -1,0 +1,28 @@
+.wrap-show-image {
+    background-color: #b5b5b5b8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+
+    .main-show-image {
+        width: 80%;
+        height: 80%;
+        background-color: aliceblue;
+        margin: auto;
+        border-radius: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        .btn-skip {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 0 1rem;
+        }
+    }
+}

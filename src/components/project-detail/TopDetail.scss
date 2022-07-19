@@ -1,0 +1,284 @@
+@import "../../index.scss";
+.top {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  margin-bottom: 10px;
+  .navigate {
+    display: flex;
+    color: #5a5858;
+    font-weight: 400;
+    margin-bottom: 10px;
+    span {
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+  .wrap-key {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    .key {
+      font-size: 25px;
+      font-weight: 500;
+    }
+    .icon {
+      width: 25px;
+      height: 25px;
+      font-weight: 100;
+      cursor: pointer;
+    }
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    .wrap-input {
+      width: 130px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 20px;
+      transition: all linear 0.1s;
+      &.expand {
+        width: 200px;
+        border-color: $main-color;
+      }
+      input {
+        width: calc(100% - 20px);
+        padding: 8px 10px;
+        border: none;
+        outline: none;
+      }
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .members {
+      display: flex;
+      .avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+        .current-members {
+          position: absolute;
+          top: calc(100% + 10px);
+          left: 0;
+          transform: translateX(-25%);
+          width: 170px;
+          padding: 10px 0;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          @apply shadow-md rounded bg-gray-main;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .add-member {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+          @apply bg-primary;
+          @apply bg-opacity-30;
+          transition: all 0.05s ease-in;
+        }
+        .icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+  .filters {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all linear 0.1s;
+    .epic {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 80px;
+      height: 35px;
+      border-radius: 4px;
+      @apply bg-gray-main;
+      transition: all linear 0.1s;
+      .epic-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        @apply bg-gray-main;
+        @apply text-epic-color;
+        font-size: 12px;
+        transition: all linear 0.1s;
+      }
+      .epic-number.active {
+        background-color: #8777d9;
+        color: #fff;
+      }
+      &:hover {
+        @apply bg-epic-color;
+        color: #fff;
+        .epic-number {
+          background-color: #8777d9;
+          color: #fff;
+        }
+      }
+      .title {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .icon {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        color: inherit;
+      }
+      .epic-dropdown {
+        color: #000;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+    .type {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 80px;
+      height: 35px;
+      border-radius: 4px;
+      @apply bg-gray-main;
+      transition: all linear 0.1s;
+      .type-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        @apply bg-gray-main;
+        @apply text-epic-color;
+        font-size: 12px;
+        transition: all linear 0.1s;
+      }
+      .type-number.active {
+        @apply bg-task-color;
+        color: #fff;
+      }
+      &:hover {
+        @apply bg-task-color;
+        color: #fff;
+        .type-number {
+          @apply bg-task-color;
+          color: #fff;
+        }
+      }
+      .title {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .icon {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        color: inherit;
+      }
+    }
+    .label {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 80px;
+      height: 35px;
+      border-radius: 4px;
+      @apply bg-gray-main;
+      transition: all linear 0.1s;
+      .label-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        font-weight: 550;
+        @apply text-epic-color;
+        @apply bg-gray-main;
+        font-size: 12px;
+        transition: all linear 0.1s;
+      }
+      .label-number.active {
+        background-color: #555;
+        color: white;
+      }
+      &:hover {
+        background-color: #ccc;
+        .label-number {
+          background-color: #ccc;
+        }
+      }
+      .title {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .icon {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        color: inherit;
+      }
+    }
+    .clear-filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 80px;
+      height: 35px;
+      border-radius: 4px;
+      font-weight: 550;
+      transition: all linear 0.1s;
+      &:hover {
+        @apply bg-gray-main;
+      }
+    }
+  }
+}
+.type-dropdown {
+  color: #000;
+  width: fit-content;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px 0 #8777d9;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+#add-member-btn {
+  @apply bg-gray-main;
+  transition: all ease-in 0.1s;
+  &:hover {
+    background-color: #bdbdbd;
+  }
+}

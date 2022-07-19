@@ -1,0 +1,18 @@
+// .content {
+//     transition: all 0.2s ease-in;
+// }
+.zoom-enter .content{
+    opacity: 0;
+    transform: scale(0.5);
+}
+.zoom-enter-active .content{
+    opacity: 1;
+    transform: scale(1);
+}
+.zoom-exit .content{
+    transform: scale(1);
+}
+.zoom-exit-active .content{
+    opacity: 0;
+    transform: scale(0.5);
+}

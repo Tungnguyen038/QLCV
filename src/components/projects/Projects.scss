@@ -1,0 +1,30 @@
+@import '../../index.scss';
+
+.list-header {
+    display: flex;
+    padding: 8px 0;
+    border-bottom: 2px solid #ccc;
+    font-weight: 500;
+    opacity: 80%;
+    .star {
+        flex-basis: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .name {
+        flex-basis: 25%;
+    }
+    .key {
+        flex-basis: 20%;
+    }
+    .type {
+        flex-basis: 25%;
+    }
+    .lead {
+        flex-basis: 25%;
+    }
+}
+.list-content {
+    border-bottom: 2px solid #ccc;
+}

@@ -1,0 +1,11 @@
+.content-modal {
+    transform: scale(0.5);
+    opacity: 0;
+    animation: show 0.2s ease-in forwards;
+}
+@keyframes show {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

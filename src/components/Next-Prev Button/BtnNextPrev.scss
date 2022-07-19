@@ -1,0 +1,31 @@
+.btn-skip,
+.btn-next,
+.btn-prev {
+    background-color: #fff;
+}
+
+.btn-skip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1rem;
+}
+
+.btn-next,
+.btn-prev {
+    border: 1px solid;
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    top: 50%;
+}
+
+.btn-next {
+    border-radius: 50% 0 0 50%;
+    right: 0;
+}
+
+.btn-prev {
+    border-radius: 0 50% 50% 0;
+    left: 0;
+}

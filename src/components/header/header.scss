@@ -1,0 +1,132 @@
+@import "../../index.scss";
+
+.header-wrapper {
+  width: 100%;
+  box-shadow: 0 1px 3px 0 #ccc;
+  display: flex;
+  justify-content: center;
+  // header
+  .header {
+    width: 100%;
+    max-width: $max-width;
+    height: $header-height;
+    background-color: #fff;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    .header-left {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      gap: 30px;
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        span {
+          font-size: 20px;
+          font-weight: 400;
+        }
+      }
+      .options {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .option {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          gap: 2px;
+          font-weight: 450;
+          a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 4px;
+            transition: all linear 0.05s;
+            cursor: pointer;
+            .line {
+              display: none;
+            }
+            &:hover {
+              @apply bg-primary;
+              @apply bg-opacity-30;
+            }
+            &.active {
+              @apply text-primary;
+              @apply font-medium;
+              user-select: none;
+              cursor: default;
+              .line {
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: inherit;
+                left: 0;
+                bottom: 0;
+                border-radius: 2px;
+                @apply bg-primary;
+              }
+            }
+          }
+        }
+      }
+    }
+    .header-right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      transition: all linear 0.1s;
+      .search-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border-radius: 4px;
+        min-width: 200px;
+        padding: 5px;
+        cursor: text;
+        .icon {
+          flex-shrink: 0;
+        }
+        input {
+          flex: 1;
+          outline: none;
+          border: none;
+          transition: all linear 1s;
+        }
+      }
+      .notifications {
+        position: relative;
+        .notify-count {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 16px;
+          height: 16px;
+          transform: translate(25%, -25%);
+          font-size: 10px;
+          background-color: rgb(245, 28, 28);
+          color: white;
+          border-radius: 50%;
+        }
+      }
+      .header-right-option {
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 50%;
+        &:hover {
+          @apply bg-primary;
+          @apply bg-opacity-30;
+        }
+      }
+    }
+  }
+}
